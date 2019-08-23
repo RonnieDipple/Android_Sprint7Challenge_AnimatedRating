@@ -3,13 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RatingFragment"
-    android:id="@+id/fragment_holder"
+    tools:context=".fragment.RatingFragment">
 
-    >
-
-    <EditText
-        android:id="@+id/edit_text"
+    <!-- TODO: Update blank fragment layout -->
+    <com.example.androiduserinterfacesprintchallenge.view.CustomView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />

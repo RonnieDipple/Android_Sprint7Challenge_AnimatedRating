@@ -4,9 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.transition.Explode
 import com.example.androiduserinterfacesprintchallenge.R
-import com.example.androiduserinterfacesprintchallenge.RatingFragment
+import com.example.androiduserinterfacesprintchallenge.fragment.RatingFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_rating.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,9 +19,11 @@ class MainActivity : AppCompatActivity() {
 
 
         btn_add.setOnClickListener {
-            if (fragment_holder!=null){
+           /* if (fragment_holder!=null){
+
+            }*/
+
             showFragment()
-            }
 
 
 
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         fragment.enterTransition = Explode()
         fragment.exitTransition = Explode()
         manager.beginTransaction()
-            .replace(R.id.fragment_holder, fragment)
+            .add(R.id.rating_fragment_id, fragment)
             .commit()
 
 
