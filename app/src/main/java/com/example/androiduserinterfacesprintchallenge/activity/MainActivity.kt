@@ -18,16 +18,20 @@ class MainActivity : AppCompatActivity() {
 
 
         btn_add.setOnClickListener {
-           val myFragment = RatingFragment()
-            val manager = supportFragmentManager
-            val transaction = manager.beginTransaction()
-            transaction.replace(R.id.fragment_holder, myFragment)
-            transaction.addToBackStack(null)
-            transaction.commit()
 
+            createFragment()
 
 
         }
+    }
+
+   private fun createFragment(){
+        val myFragment = RatingFragment()
+        val manager = supportFragmentManager
+        val transaction = manager.beginTransaction()
+        transaction.replace(R.id.fragment_holder, myFragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 
 

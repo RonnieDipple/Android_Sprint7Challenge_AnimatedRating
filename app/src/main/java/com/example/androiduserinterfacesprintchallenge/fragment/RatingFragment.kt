@@ -2,15 +2,15 @@ package com.example.androiduserinterfacesprintchallenge.fragment
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.DialogFragment
 
 import com.example.androiduserinterfacesprintchallenge.R
 
 
-class RatingFragment : Fragment() {
+class RatingFragment : DialogFragment() {
 
 
     override fun onCreateView(
