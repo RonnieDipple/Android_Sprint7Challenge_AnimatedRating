@@ -9,7 +9,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val manager = supportFragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,28 +18,17 @@ class MainActivity : AppCompatActivity() {
 
 
         btn_add.setOnClickListener {
-           /* if (fragment_holder!=null){
-
-            }*/
-
-            showFragment()
+           val myFragment = RatingFragment()
+            val manager = supportFragmentManager
+            val transaction = manager.beginTransaction()
+            transaction.replace(R.id.fragment_holder, myFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
 
 
 
         }
     }
 
-    private fun showFragment(){
 
-
-        val fragment = RatingFragment()
-        fragment.enterTransition = Explode()
-        fragment.exitTransition = Explode()
-        manager.beginTransaction()
-            .add(R.id.rating_fragment_id, fragment)
-            .commit()
-
-
-
-    }
 }
