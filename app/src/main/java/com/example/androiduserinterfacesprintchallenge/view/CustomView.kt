@@ -2,21 +2,22 @@ package com.example.androiduserinterfacesprintchallenge.view
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.TextView
-import com.example.androiduserinterfacesprintchallenge.R
-
-class CustomView (context: Context, attrs: AttributeSet?): LinearLayout(context, attrs ){
-
-    init {
+import androidx.appcompat.widget.AppCompatEditText
 
 
-        val textView = LayoutInflater.from(context).inflate(R.layout.fragment_rating, this, false) as TextView
-        textView.text = "test"
+class CustomView : AppCompatEditText{
 
-        addView(textView)
-    }
+
+    constructor(context: Context) : super(context)
+
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
+
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    )
+
+
+
 }

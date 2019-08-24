@@ -8,12 +8,18 @@
 
     >
 
-   <TextView
+   <com.example.androiduserinterfacesprintchallenge.view.CustomView
 
-       android:background="@color/colorPrimary"
-       android:id="@+id/textview_test"
-       android:layout_width="wrap_content"
+
+       android:layout_marginLeft="100dp"
+       android:layout_marginRight="100dp"
+       android:textColor="@android:color/white"
+       android:background="@android:color/black"
+       android:inputType="text"
+       android:hint="@string/name"
+       android:id="@+id/customView_test"
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:text="Test"/>
+       />
 
 </LinearLayout>
